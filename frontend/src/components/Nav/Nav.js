@@ -5,13 +5,13 @@ import logo from '../../../static/logo.svg';
 import { useRowFinder } from '../../hooks';
 
 const NavStyles = styled.nav`
-  border-bottom: 5px solid var(--primary-color);
+  border-bottom: 5px solid #f30084;
   display: grid;
   grid-template-columns: 1fr;
   h1 {
     display: grid;
     justify-items: center;
-    margin: 1em;
+    margin: 2em;
     img {
       width: 250px;
     }
@@ -53,6 +53,7 @@ const NavUl = styled.ul`
   margin: 0;
   padding: 3rem 2rem 2rem 2rem;
   box-shadow: rgb(0 0 0 / 6%) 0px -4px 4px;
+  background-color: var(--light-color);
   @media (max-width: 550px) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -96,13 +97,14 @@ const NavLi = styled.li`
     font-size: 4.2rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--title-color);
+    color: var(--dark-color);
     text-decoration: none;
     line-height: 1;
     &[aria-current='page'],
     &.current-parent {
       .nav-title {
         text-decoration: underline;
+        text-decoration-color: #f30084;
       }
     }
 

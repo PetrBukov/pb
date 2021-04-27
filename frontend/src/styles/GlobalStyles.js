@@ -63,7 +63,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     min-height: 100vh;
-    background-color: #f0dab6;
+    /* background-color: #f0dab6; */
 
     background-image: url(${dots});
     background-repeat: repeat;
