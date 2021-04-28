@@ -1,27 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 import dots from '../assets/images/dots.svg';
+import modernTypewritter from '../assets/fonts/Modern-Typewritter.ttf';
 
 const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: ModernTypewritter; 
+    src: url(${modernTypewritter});
+  }
   :root { 
     /* base colors */
     --white: #ffffff;
     --black: #000000;
-
-    /* teal colors */
-    --teal-lighten-5: #e0f2f1;
-    --teal-lighten-4: #b2dfdb;
-    --teal-lighten-3: #80cbc4;
-    --teal-lighten-2: #4db6ac;
-    --teal-lighten-1: #26a69a;
-    --teal: #009688;
-    --teal-darken-1: #00897b;
-    --teal-darken-2: #00796b;
-    --teal-darken-3: #00695c;
-    --teal-darken-4: #004d40;
-    --teal-accent-1: #a7ffeb;
-    --teal-accent-2: #64ffda;
-    --teal-accent-3: #1de9b6;
-    --teal-accent-4: #00bfa5;
+    --pink: #f30084;
 
     /* grey (gray) colors */
     --grey-lighten-5: #fafafa;
@@ -48,11 +38,8 @@ const GlobalStyles = createGlobalStyle`
     /* size constants */
     --maxWidth: 1200px;
 
-    /* theme constants */
-    --primary-color-lighten-5: var(--teal-lighten-5);
-    --primary-color: var(--teal);
-    --secondary-color: var(--grey-darken-3);
-    --title-color: #007cac;
+    /* theme color constants */
+    --primary-color: var(--pink);
     --dark-color: var(--black);
     --light-color: var(--white);
   }
@@ -60,14 +47,39 @@ const GlobalStyles = createGlobalStyle`
     font-size: 10px;
     position: relative;
     color: var(--dark-color);
-  }
-  body {
-    min-height: 100vh;
-    /* background-color: #f0dab6; */
 
+    --size: 40px;
+    @media(max-width: 800px) {
+      --size: 20px;
+    }
+    --borderSize: calc(var(--size) / 2);
+    box-sizing: border-box;
+    border: var(--borderSize) solid var(--dark-color);
+    border-color: var(--dark-color);
+  }
+  
+  body {
+    min-height: calc(100vh - var(--size));
     background-image: url(${dots});
     background-repeat: repeat;
     background-size: 642px;
+  }
+
+  /* Scrollbar Styles */
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--dark-color);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color) ;
+    border-radius: 6px;
+    border: 3px solid var(--dark-color);
+  }
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--dark-color);
   }
 `;
 

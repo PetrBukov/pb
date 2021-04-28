@@ -3,44 +3,28 @@ import { Link } from 'gatsby';
 import styled, { css } from 'styled-components';
 import logo from '../../../static/logo.svg';
 import { useRowFinder } from '../../hooks';
+import accent from '../../assets/images/accent.svg';
 
 const NavStyles = styled.nav`
-  border-bottom: 5px solid #f30084;
+  border-bottom: 5px solid var(--primary-color);
   display: grid;
   grid-template-columns: 1fr;
+
   h1 {
     display: grid;
     justify-items: center;
     margin: 2em;
+
     img {
       width: 250px;
     }
 
     a.logo {
       font-size: 0;
-
-      &:hover {
-        img {
-          filter: drop-shadow(0px 0px 13px rgba(255, 255, 255, 0.6));
-        }
-      }
     }
-  }
-  @media (max-width: 550px) {
-    ul {
-      padding: 2rem 1rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 
-      a > span {
-        display: block;
-        padding: 1rem 0;
-      }
-      a:hover {
-        span:before {
-          display: none;
-        }
-      }
+    @media (max-width: 550px) {
+      margin: 1em;
     }
   }
 `;
@@ -54,9 +38,21 @@ const NavUl = styled.ul`
   padding: 3rem 2rem 2rem 2rem;
   box-shadow: rgb(0 0 0 / 6%) 0px -4px 4px;
   background-color: var(--light-color);
+
   @media (max-width: 550px) {
+    padding: 2rem 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+    a > span {
+      display: block;
+      padding: 1rem 0;
+    }
+    a:hover {
+      span:before {
+        display: none;
+      }
+    }
   }
 `;
 
@@ -83,33 +79,28 @@ const NavLi = styled.li`
         display: none;
       }
     `}
-  &:after {
-    content: '•';
-    display: grid;
-    color: var(--primary-color-lighten-5);
-    height: 100%;
-    align-items: center;
-  }
-  &:last-child:after {
-    display: none;
-  }
   a {
     font-size: 4.2rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: ModernTypewritter, Roboto, Oxygen, Ubuntu, Cantarell,
+      'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--dark-color);
     text-decoration: none;
-    line-height: 1;
+    line-height: 1.3;
+    letter-spacing: 1px;
     &[aria-current='page'],
     &.current-parent {
       .nav-title {
         text-decoration: underline;
-        text-decoration-color: #f30084;
+        text-decoration-color: var(--primary-color);
       }
     }
 
+    .nav-title {
+      position: relative;
+    }
+
     small {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       display: block;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -118,21 +109,20 @@ const NavLi = styled.li`
       line-height: 10px;
       position: relative;
       pointer-events: none;
+      letter-spacing: initial;
+    }
+
+    small.top {
+      top: 9px;
+    }
+    small.bottom {
+      top: -8px;
     }
   }
   @media (max-width: 550px) {
     grid-template-columns: 1fr;
     margin: 0;
     text-align: center;
-    /* This gets rid of the X */
-    &:after {
-      display: none;
-    }
-    a {
-      &:before {
-        display: none;
-      }
-    }
     & > *,
     span {
       transform: scale(1);
@@ -142,37 +132,30 @@ const NavLi = styled.li`
     small.bottom {
       display: none;
     }
-    span.grit {
-      padding: 0;
-    }
   }
 `;
 
 const Text = styled.span`
-  font-size: 4.2rem;
+  font-size: 3.2rem;
   position: relative;
   &:before {
-    width: 0.75em;
-    height: 0.75em;
-    border-radius: 50%;
+    width: 0.9em;
+    height: 0.9em;
     content: '';
     pointer-events: none;
-    border: 0.08em solid var(--yellow);
-    box-shadow: -6px -8px 21px -3px var(--yellow);
     position: absolute;
+    top: -9px;
+    left: -9px;
     z-index: 0;
-    --translate: -0.5rem;
-    --rotate: 0deg;
-    transform: translateX(var(--translate)) translateY(var(--translate))
-      rotate(var(--rotate));
     visibility: hidden;
+    background: url(${accent}) no-repeat;
   }
   &:hover:before {
     visibility: visible;
   }
   a {
     color: inherit;
-    text-decoration-color: var(--yellow);
+    text-decoration-color: var(--primary-color);
   }
 `;
 
@@ -192,30 +175,30 @@ export const Nav = () => {
       </h1>
       <NavUl ref={ref}>
         <NavLi row={getRow(0)}>
-          <Link to="/teas">
-            <small className="top">самый</small>
+          <Link to="/blog">
+            <small className="top">тут 🔥</small>
             <Text as="span">
               <span className="nav-title">Блог</span>
             </Text>
-            <small className="bottom">честный</small>
+            <small className="bottom hideYoSelf">x</small>
           </Link>
         </NavLi>
         <NavLi row={getRow(1)}>
-          <Link to="/chocolate">
-            <small className="top">здесь</small>
+          <Link to="/about">
+            <small className="top">узнать</small>
             <Text as="span">
-              <span className="nav-title">Обо мне</span>
+              <span className="nav-title">Обомне</span>
             </Text>
-            <small className="bottom">пара слов</small>
+            <small className="bottom">больше</small>
           </Link>
         </NavLi>
         <NavLi row={getRow(2)}>
-          <Link to="/combos">
-            <small className="top">полезные</small>
+          <Link to="/resources">
+            <small className="top">вкусные</small>
             <Text as="span">
               <span className="nav-title">Ресурсы</span>
             </Text>
-            <small className="bottom">ссылки</small>
+            <small className="bottom">полезные</small>
           </Link>
         </NavLi>
       </NavUl>
