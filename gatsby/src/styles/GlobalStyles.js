@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --grey: #efefef;
     --pink: #e9abc8;
+    --blue: #73a7dc;
   }
   html {
     font-size: 10px;
