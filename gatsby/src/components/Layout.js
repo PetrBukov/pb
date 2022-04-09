@@ -14,7 +14,7 @@ const SiteBorderStyles = styled.div`
   background-color: white;
   background-image: url(${grunge}),
     repeating-linear-gradient(
-      -55deg,
+      132deg,
       var(--pink),
       var(--pink) 20px,
       white 20px,
