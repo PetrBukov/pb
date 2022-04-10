@@ -1,4 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
+// TODO: buy a licence for this image before the release
+import houses from '../assets/images/houses.jpg';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -12,6 +14,22 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     font-size: 10px;
+
+    &:before {
+      content: "";
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url(${houses});
+      background-size: 500px;
+      filter: brightness(0.8) grayscale(0.4);
+      opacity: 0.1;
+    }
+    
   }
 
   body {
@@ -50,13 +68,13 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--red) var(--white);
+    scrollbar-color: var(--pink) var(--white);
   }
   body::-webkit-scrollbar-track {
     background: var(--white);
   }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--red) ;
+    background-color: var(--pink) ;
     border-radius: 6px;
     border: 3px solid var(--white);
   }

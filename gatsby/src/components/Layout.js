@@ -5,6 +5,7 @@ import Nav from './Nav';
 import 'normalize.css';
 import GlobalStyles from '../styles/GlobalStyles';
 import Typography from '../styles/Typography';
+// TODO: buy a licence for this image before the release
 import grunge from '../assets/images/grunge.png';
 
 const SiteBorderStyles = styled.div`
