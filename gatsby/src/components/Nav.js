@@ -92,7 +92,7 @@ export default function Nav() {
           <Link to="/about">About Me</Link>
         </li>
         <li>
-          <Link to="/contact">Contact Me</Link>
+          <Link to="/contact">Contacts</Link>
         </li>
       </ul>
     </NavStyles>
