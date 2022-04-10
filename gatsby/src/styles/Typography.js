@@ -5,6 +5,7 @@ import khulaRegular from '../assets/fonts/Khula-Regular.ttf';
 import khulaSemiBold from '../assets/fonts/Khula-SemiBold.ttf';
 import khulaBold from '../assets/fonts/Khula-Bold.ttf';
 import khulaExtraBold from '../assets/fonts/Khula-ExtraBold.ttf';
+import grapeNutsRegular from '../assets/fonts/GrapeNuts-Regular.ttf';
 
 const Typography = createGlobalStyle`
   @font-face {
@@ -31,6 +32,11 @@ const Typography = createGlobalStyle`
     font-family: Trillian;
     src: url(${khulaExtraBold});
     font-weight: 900;
+  }
+  @font-face {
+    font-family: Handwriting;
+    src: url(${grapeNutsRegular});
+    font-weight: 400;
   }
 
   html {
@@ -64,6 +70,10 @@ const Typography = createGlobalStyle`
 
   .tilt {
     transform: rotate(-2deg);
+  }
+
+  .handwriting {
+    font-family:  Handwriting, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 `;
 

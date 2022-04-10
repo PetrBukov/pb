@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 // TODO: buy a licence for this image before the release
-import houses from '../assets/images/houses.jpg';
+// import houses from '../assets/images/houses.jpg';
+// import handwriting from '../assets/images/handwriting.jpg';
+import letters from '../assets/images/letters.jpg';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -14,6 +16,8 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     font-size: 10px;
+    overflow: auto;
+    position: relative;
 
     &:before {
       content: "";
@@ -24,10 +28,10 @@ const GlobalStyles = createGlobalStyle`
       display: block;
       width: 100%;
       height: 100%;
-      background-image: url(${houses});
-      background-size: 500px;
-      filter: brightness(0.8) grayscale(0.4);
-      opacity: 0.1;
+      background-image: url(${letters});
+      background-size: 520px;
+      /* filter: brightness(0.8) grayscale(0.4); */
+      opacity: 0.15;
     }
     
   }
