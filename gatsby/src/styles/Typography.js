@@ -7,7 +7,7 @@ import khulaBold from '../assets/fonts/Khula-Bold.ttf';
 import khulaExtraBold from '../assets/fonts/Khula-ExtraBold.ttf';
 import grapeNutsRegular from '../assets/fonts/GrapeNuts-Regular.ttf';
 
-const Typography = createGlobalStyle`
+export const Typography = createGlobalStyle`
   @font-face {
     font-family: Trillian;
     src: url(${khulaLight});
@@ -52,29 +52,17 @@ const Typography = createGlobalStyle`
   }
   a {
     color: var(--black);
-    text-decoration-color: var(--pink);
-    /* Chrome renders this weird with this font, so we turn it off */
-    /* text-decoration-skip-ink: none; */
+    text-decoration: none;
   }
-  mark, .mark {
-    background: var(--yellow); 
-    padding: 0 2px 2px 2px;
-    margin: 0;
-    display: inline;
-    line-height: 1;
+  a[aria-current="page"] {
+    text-decoration: underline var(--pink) 0.15em;
   }
 
   .center {
     text-align: center;
   }
 
-  .tilt {
-    transform: rotate(-2deg);
-  }
-
   .handwriting {
     font-family:  Handwriting, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 `;
-
-export default Typography;

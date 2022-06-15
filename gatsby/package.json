@@ -1,7 +1,7 @@
 {
-  "name": "slicks-slices-frontend",
+  "name": "petr-bukov-blog-frontend",
   "private": true,
-  "description": "Slick Serves the Sweetest Slices",
+  "description": "The greatest blog about the minimalism",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
