@@ -12,10 +12,10 @@ export const Nav = () => (
         <Link to="/blog">The Blog</Link>
       </li>
       <li>
-        <Link to="/about">About Me</Link>
+        <Link to="/guides">Guides</Link>
       </li>
       <li>
-        <Link to="/guides">Guides</Link>
+        <Link to="/about">About Me</Link>
       </li>
     </ul>
   </NavStyles>
