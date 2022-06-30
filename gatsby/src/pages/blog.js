@@ -1,10 +1,9 @@
 import React from 'react';
-import { PageTitle } from '../styles';
 
 export default function BlogPage() {
   return (
     <>
-      <PageTitle>Blog</PageTitle>
+      <h2>Blog</h2>
 
       <p>
         Duis consectetur magna auctor dolor ultrices consequat. In hac habitasse

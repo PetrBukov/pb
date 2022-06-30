@@ -1,12 +1,11 @@
 import React from 'react';
-import { PageTitle } from '../styles';
 
 // latest essay: 1 items
 // crucial essays: 4 items
 export default function HomePage() {
   return (
     <>
-      <PageTitle>Hot Essays</PageTitle>
+      <h2>Hot Essays</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget
         semper nisi. Nam id diam dignissim, fermentum ante sed, pellentesque

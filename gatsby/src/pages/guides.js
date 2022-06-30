@@ -1,10 +1,9 @@
 import React from 'react';
-import { PageTitle } from '../styles';
 
 export default function ContactPage() {
   return (
     <>
-      <PageTitle>Contacts</PageTitle>
+      <h2>Guides</h2>
 
       <p>
         Morbi semper augue sit amet ex pulvinar, vel ornare erat suscipit. Proin

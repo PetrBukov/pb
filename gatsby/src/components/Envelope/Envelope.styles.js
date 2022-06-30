@@ -2,15 +2,11 @@ import styled from 'styled-components';
 // TODO: buy a licence for this image before the release
 import grunge from '../../assets/images/grunge.png';
 
-// TODO: apply sizes of real envelope
-// max-width: 830px;
-// height: 415px;
 export const Container = styled.div`
   position: relative;
   width: calc(100% - 4px);
   max-width: 830px;
   height: clamp(200px, 42vw, 415px);
-  /* background-color: rgb(242, 242, 242); */
   background-color: #fefefe;
   background-image: url(${grunge}),
     repeating-linear-gradient(

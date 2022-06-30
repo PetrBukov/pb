@@ -15,7 +15,7 @@ export const Nav = () => (
         <Link to="/about">About Me</Link>
       </li>
       <li>
-        <Link to="/contact">Contacts</Link>
+        <Link to="/guides">Guides</Link>
       </li>
     </ul>
   </NavStyles>

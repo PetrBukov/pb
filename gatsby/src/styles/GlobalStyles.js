@@ -16,6 +16,7 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
     position: relative;
+    box-sizing: border-box;
   }
 
   body, #___gatsby, #gatsby-focus-wrapper {
@@ -24,10 +25,6 @@ export const GlobalStyles = createGlobalStyle`
     display: flex; 
     flex-direction: column;
     flex-grow: 1;
-  }
-
-  html {
-    box-sizing: border-box;
   }
 
   *, *:before, *:after {
