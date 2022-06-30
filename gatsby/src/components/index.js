@@ -3,3 +3,4 @@ export { MainContent } from './MainContent';
 export { Layout } from './Layout';
 export { Footer } from './Footer';
 export { Nav } from './Nav';
+export { EssayPreviewWithPhoto } from './EssayPreviewWithPhoto';

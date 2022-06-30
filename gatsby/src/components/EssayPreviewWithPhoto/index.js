@@ -1,0 +1,1 @@
+export { EssayPreviewWithPhoto } from './EssayPreviewWithPhoto';

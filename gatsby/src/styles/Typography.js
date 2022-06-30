@@ -60,6 +60,13 @@ export const Typography = createGlobalStyle`
     line-height: 1.2em;
     color: var(--black);
   }
+  h3 {
+    font-size: clamp(24px, 2.5vw, 28px); 
+    font-family: Handwriting, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.2em;
+    color: var(--black);
+  }
 
   a {
     color: var(--black);

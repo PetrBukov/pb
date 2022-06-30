@@ -1,4 +1,5 @@
 import React from 'react';
+import { EssayPreviewWithPhoto } from '../components';
 
 // latest essay: 1 items
 // crucial essays: 4 items
@@ -6,6 +7,12 @@ export default function HomePage() {
   return (
     <>
       <h2>Hot Essays</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget
+        semper nisi. Nam id diam dignissim, fermentum ante sed, pellentesque
+        lorem. Duis id quam ex. In fermentum efficitur porttitor.
+      </p>
+      <EssayPreviewWithPhoto />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget
         semper nisi. Nam id diam dignissim, fermentum ante sed, pellentesque
