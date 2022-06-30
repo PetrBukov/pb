@@ -39,6 +39,7 @@ export const GlobalStyles = createGlobalStyle`
     url(${woodenBackground});
     background-size: 100%; 
     padding: clamp(2px, 2vw, 20px);
+    overscroll-behavior: none;
   }
 
   #gatsby, #gatsby-focus-wrapper {
